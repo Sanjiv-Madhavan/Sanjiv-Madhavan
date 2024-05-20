@@ -1,6 +1,6 @@
 # 💫 About Me:
 
-I am a fullstack developer working at SAP, having extensive experience in cloud native development. I have expertise in Golang, Kubernetes as a part of backend and Angular JS as a part of frontend development. Welcome to my git where I showcase my relevant projects. Feel free to contact me at:&ensp;
+I am a cloud-native fullstack developer working at SAP, having extensive experience in cloud native development. I have expertise in Golang, Kubernetes as a part of backend and Angular JS as a part of frontend development. Welcome to my git where I showcase my relevant projects. Feel free to contact me at:&ensp;
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/sanjivmadhavan/) 
 
 Things I love other than building stuff:<br><br>┊┊┊┊╭╯╭╯┊┊┊<br>┊╱▔╭╯╭╯▔╲┊┊<br>▕╲▂▂▂▂▂▂╱▏┊<br>┊▏┈╱╲╱╲┈▕━╮<br>┊▏┈╲┈┈╱┈▕┊┃<br>┊▏┈┈╲╱┈┈▕━╯<br>┊╲▂▂▂▂▂▂╱┊┊<br><br><br>
