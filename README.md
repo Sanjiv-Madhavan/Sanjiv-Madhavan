@@ -1,3 +1,5 @@
+![Metrics](/github-metrics.svg)
+
 # 💫 About Me:
 
 I am a cloud-native fullstack developer working at SAP, having extensive experience in cloud native development. I have expertise in Golang, Kubernetes as a part of backend and Angular JS as a part of frontend development. Welcome to my git where I showcase my relevant projects. Feel free to contact me at:&ensp;
@@ -12,9 +14,9 @@ Things I love other than building stuff:<br><br>┊┊┊┊╭╯╭╯┊┊�
 <br/>
 
 <!-- # 📊 GitHub Stats: -->
-&ensp;&ensp;&ensp;![](https://github-readme-stats.vercel.app/api?username=sanjiv-madhavan&theme=calm&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=sanjiv-madhavan&theme=calm&hide_border=false)<br/>
-
+&ensp;&ensp;&ensp;
+![](https://github-readme-streak-stats.herokuapp.com/?user=sanjiv-madhavan&theme=holi-theme&hide_border=false)<br/>
+<!-- ![](https://github-readme-stats.vercel.app/api?username=sanjiv-madhavan&theme=calm&hide_border=false&include_all_commits=false&count_private=false)<br/> -->
 
 <!-- ### 🔝 Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=sanjiv-madhavan&limit=5&theme=nord&combine_all_yearly_contributions=true)
@@ -36,7 +38,5 @@ Another theme
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/https://www.instagram.com/sanjivmadhavan/) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/sanjivmadhavan/) 
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
-
-![Metrics](/github-metrics.svg)
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
