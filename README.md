@@ -37,6 +37,6 @@ Another theme
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
 
-![Metrics](/github-metrics.svg)
+![Metrics](/sample.svg)
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
