@@ -1,0 +1,51 @@
+name: Update Lines of Code
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Runs daily at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  count_lines:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Profile Repo
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: sudo apt-get install cloc jq -y
+
+      - name: Fetch Repositories and Count LOC
+        env:
+          METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: |
+          echo "Fetching repositories..."
+          REPOS=$(curl -s -H "Authorization: token $METRICS_TOKEN" \
+            "https://api.github.com/user/repos?per_page=100" | jq -r '.[].clone_url')
+
+          TOTAL_LOC=0
+          mkdir repos
+          cd repos
+
+          for REPO in $REPOS; do
+            echo "Cloning $REPO..."
+            git clone --depth=1 $REPO repo_temp &> /dev/null
+            if [ -d "repo_temp" ]; then
+              LOC=$(cloc repo_temp --json | jq '.SUM.code')
+              TOTAL_LOC=$((TOTAL_LOC + LOC))
+              rm -rf repo_temp
+            fi
+          done
+
+          echo "Total Lines of Code: $TOTAL_LOC"
+          echo "LOC=$TOTAL_LOC" >> $GITHUB_ENV
+
+      - name: Update README with LOC
+        run: |
+          sed -i "s/<!--LOC-->.*/<!--LOC--> $LOC/" README.md
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add README.md
+          git commit -m "Update lines of code" || echo "No changes to commit"
+          git push

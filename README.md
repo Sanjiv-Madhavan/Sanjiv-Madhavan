@@ -18,6 +18,8 @@ Things I love other than building stuff:<br><br>┊┊┊┊╭╯╭╯┊┊�
 <!-- # 📊 GitHub Stats: -->
 <!-- &ensp;&ensp;&ensp;[![GitHub Streak](https://streak-stats.demolab.com?user=Sanjiv-Madhavan&theme=holi-theme)](https://git.io/streak-stats) -->
 <!-- ![](https://github-readme-stats.vercel.app/api?username=sanjiv-madhavan&theme=calm&hide_border=false&include_all_commits=false&count_private=false)<br/> -->
+### 📊 Total Lines of Code Written:
+<!--LOC--> 0
 
 ![Metrics](/github-metrics.svg)
 
