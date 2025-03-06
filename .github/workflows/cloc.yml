@@ -3,10 +3,10 @@ name: Update Lines of Code
 on:
   schedule:
     - cron: "0 0 * * *"  # Runs daily at midnight UTC
-  workflow_dispatch:  # Allows manual trigger
+  workflow_dispatch:
   push:
     branches:
-      - main  # Ensure your default branch is correct
+      - main
 
 jobs:
   count_lines:
@@ -36,7 +36,8 @@ jobs:
             git clone --depth=1 https://${CLOC_TOKEN}@github.com/$REPO.git repo_temp || { echo "Failed to clone $REPO"; continue; }
 
             if [ -d "repo_temp" ]; then
-              LOC=$(cloc repo_temp --json | jq '.SUM.code')
+              echo "Running cloc with exclusions..."
+              LOC=$(cloc repo_temp --timeout=300 --exclude-dir=vendor,node_modules,third_party --json | jq '.SUM.code')
               TOTAL_LOC=$((TOTAL_LOC + LOC))
               rm -rf repo_temp
             fi
@@ -47,6 +48,7 @@ jobs:
 
       - name: Update README with LOC
         run: |
+          git pull --rebase
           sed -i "s/<!--LOC-->.*/<!--LOC--> $LOC/" README.md
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
