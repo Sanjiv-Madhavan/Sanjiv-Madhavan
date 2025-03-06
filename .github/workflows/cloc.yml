@@ -3,7 +3,10 @@ name: Update Lines of Code
 on:
   schedule:
     - cron: "0 0 * * *"  # Runs daily at midnight UTC
-  workflow_dispatch:
+  workflow_dispatch:  # Allows manual trigger
+  push:
+    branches:
+      - main  # Ensure your default branch is correct
 
 jobs:
   count_lines:
@@ -22,15 +25,16 @@ jobs:
         run: |
           echo "Fetching repositories..."
           REPOS=$(curl -s -H "Authorization: token $CLOC_TOKEN" \
-            "https://api.github.com/user/repos?per_page=100" | jq -r '.[].clone_url')
+            "https://api.github.com/user/repos?per_page=100" | jq -r '.[] | select(.fork == false) | .full_name')
 
           TOTAL_LOC=0
           mkdir repos
           cd repos
 
           for REPO in $REPOS; do
-            echo "Cloning $REPO..."
-            git clone --depth=1 $REPO repo_temp &> /dev/null
+            echo "Cloning https://${CLOC_TOKEN}@github.com/$REPO.git..."
+            git clone --depth=1 https://${CLOC_TOKEN}@github.com/$REPO.git repo_temp || { echo "Failed to clone $REPO"; continue; }
+
             if [ -d "repo_temp" ]; then
               LOC=$(cloc repo_temp --json | jq '.SUM.code')
               TOTAL_LOC=$((TOTAL_LOC + LOC))
