@@ -22,7 +22,7 @@ Things I love other than building stuff:<br><br>┊┊┊┊╭╯╭╯┊┊�
 ### 📝 Total Lines of Code Written:
 <p align="center">
   <strong style="font-size: 1.5em; color: #0078ff;">
-    <!--LOC-->
+    <!--LOC--> 312777
   </strong>
 </p>
 
