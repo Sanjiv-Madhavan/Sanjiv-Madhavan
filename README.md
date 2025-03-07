@@ -18,8 +18,13 @@ Things I love other than building stuff:<br><br>┊┊┊┊╭╯╭╯┊┊�
 <!-- # 📊 GitHub Stats: -->
 <!-- &ensp;&ensp;&ensp;[![GitHub Streak](https://streak-stats.demolab.com?user=Sanjiv-Madhavan&theme=holi-theme)](https://git.io/streak-stats) -->
 <!-- ![](https://github-readme-stats.vercel.app/api?username=sanjiv-madhavan&theme=calm&hide_border=false&include_all_commits=false&count_private=false)<br/> -->
-## Code Contributions
-### 📝 Total Lines of Code Written: <strong style="font-size: 1.2em; color:rgb(8, 167, 11);"> <!--LOC--> </strong>
+<!-- ## Code Contributions -->
+<!-- ### 📝 Total Lines of Code Contributed: <strong style="font-size: 1.2em; color:rgb(8, 167, 11);"> LOC </strong> -->
+<p>
+  <img src="https://raw.githubusercontent.com/Sanjiv-Madhavan/Sanjiv-Madhavan/main/loc_badge.svg" alt="Total Lines of Code"/>
+</p>
+
+
 ![Metrics](/github-metrics.svg)
 
 <!-- ### 🔝 Top Contributed Repo

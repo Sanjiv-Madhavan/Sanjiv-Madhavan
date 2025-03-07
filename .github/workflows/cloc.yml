@@ -46,12 +46,30 @@ jobs:
           echo "Total Lines of Code: $TOTAL_LOC"
           echo "LOC=$TOTAL_LOC" >> $GITHUB_ENV
 
-      - name: Update README with LOC
+      # - name: Update README with LOC
+      #   run: |
+      #     git pull --rebase
+      #     sed -i "s/<!--LOC-->.*/<!--LOC--> $LOC/" README.md
+      #     git config --global user.name "github-actions"
+      #     git config --global user.email "github-actions@github.com"
+      #     git add README.md
+      #     git commit -m "Update lines of code" || echo "No changes to commit"
+      #     git push
+
+      - name: Generate SVG Badge
         run: |
-          git pull --rebase
-          sed -i "s/<!--LOC-->.*/<!--LOC--> $LOC/" README.md
+          LOC_VALUE=$(echo "$LOC" | awk '{ printf "%'"'"'d\n", $1 }')  # Formats with thousands separator
+          echo '<svg xmlns="http://www.w3.org/2000/svg" width="150" height="30">
+          <rect width="100%" height="100%" fill="#555"/>
+          <rect x="100" width="50" height="30" fill="#007ec6"/>
+          <text x="10" y="20" fill="white" font-family="Arial" font-size="14">Lines of Code</text>
+          <text x="115" y="20" fill="white" font-family="Arial" font-size="14">'$LOC_VALUE'</text>
+          </svg>' > loc_badge.svg
+
+      - name: Commit and Push Badge
+        run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add README.md
-          git commit -m "Update lines of code" || echo "No changes to commit"
+          git add loc_badge.svg
+          git commit -m "Update LOC badge" || echo "No changes to commit"
           git push
