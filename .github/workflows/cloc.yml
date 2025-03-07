@@ -66,12 +66,13 @@ jobs:
             <text x="215" y="20" fill="white" font-family="Arial" font-size="14" text-anchor="middle">'$LOC_VALUE'</text>
           </svg>' > loc_badge.svg
 
-
       - name: Commit and Push Badge
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
+          git stash  # Temporarily store unstaged changes
           git pull --rebase
+          git stash pop  # Restore changes
           git add loc_badge.svg
           git commit -m "Update LOC badge" || echo "No changes to commit"
           git push
