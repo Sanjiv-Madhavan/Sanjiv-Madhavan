@@ -2,7 +2,7 @@
 
 👋 Hi, I'm Sanjiv!
 
-I'm a professional gopher currently pursuing a Master’s in AI & ML at the University of Birmingham with 4+ years of experience as a Full Stack Developer at SAP. My expertise lies in backend development with Golang and Kubernetes, along with frontend development using AngularJS. Passionate about scalable architectures, distributed systems, and event-driven microservices, I’m always exploring new challenges in AI, ML, and cloud automation. Welcome to my GitHub!
+I'm a professional gopher based out of London, with a Master’s degree in AI & ML at the University of Birmingham and 4+ years of experience as a Full Stack Developer at SAP. My expertise lies in backend development with Golang and Kubernetes, along with frontend development using AngularJS. Passionate about scalable architectures, distributed systems, and event-driven microservices, I’m always exploring new challenges in AI, ML, and cloud automation. Welcome to my GitHub!
 
 Feel free to contact me at:&ensp;
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/sanjivmadhavan/) 
